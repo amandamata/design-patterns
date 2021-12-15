@@ -1,5 +1,4 @@
-﻿using System;
-using DesignPatterns.Strategy.Solution;
+﻿using DesignPatterns.Strategy.Tax.Solution;
 
 namespace DesignPatterns
 {

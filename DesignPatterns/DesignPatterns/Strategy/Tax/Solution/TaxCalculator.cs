@@ -1,6 +1,6 @@
 using System;
 
-namespace DesignPatterns.Strategy.Solution
+namespace DesignPatterns.Strategy.Tax.Solution
 {
     public class TaxCalculator
     {

@@ -1,4 +1,4 @@
-namespace DesignPatterns.Strategy.Problem
+namespace DesignPatterns.Strategy.Tax.Problem
 {
     public class Budget
     {

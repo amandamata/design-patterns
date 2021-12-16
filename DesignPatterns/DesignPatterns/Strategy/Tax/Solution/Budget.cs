@@ -2,11 +2,11 @@ namespace DesignPatterns.Strategy.Tax.Solution
 {
     public class Budget
     {
-        public double Value { get; private set; }
+        public double Value { get; }
 
         public Budget(double value)
         {
-            this.Value = value;
+            Value = value;
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace DesignPatterns.Strategy.Tax.Solution
 {
-    public static class StrategyExecute
+    public static class TaxExecute
     {
         public static void Run()
         {

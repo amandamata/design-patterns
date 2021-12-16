@@ -1,12 +1,14 @@
-﻿using DesignPatterns.Strategy.Tax.Solution;
+﻿using DesignPatterns.ChainOfResponsibility.Discount.Solution;
+using DesignPatterns.Strategy.Tax.Solution;
 
 namespace DesignPatterns
 {
-    class Program
+    static class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            StrategyExecute.Run();
+            // TaxExecute.Run();
+            // DiscountExecute.Run();
         }
     }
 }

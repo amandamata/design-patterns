@@ -1,5 +1,6 @@
-﻿using DesignPatterns.ChainOfResponsibility.Discount.Solution;
-using DesignPatterns.Strategy.Tax.Solution;
+﻿// using DesignPatterns.ChainOfResponsibility.Discount.Solution;
+// using DesignPatterns.Strategy.Tax.Solution;
+// using DesignPatterns.Decorator;
 
 namespace DesignPatterns
 {

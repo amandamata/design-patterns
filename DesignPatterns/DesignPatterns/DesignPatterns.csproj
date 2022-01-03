@@ -10,4 +10,19 @@
       <Folder Include="Strategy\Tax" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="State\Problem\**" />
+      <Compile Remove="State\Solution\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="State\Problem\**" />
+      <EmbeddedResource Remove="State\Solution\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="State\Problem\**" />
+      <None Remove="State\Solution\**" />
+    </ItemGroup>
+
 </Project>

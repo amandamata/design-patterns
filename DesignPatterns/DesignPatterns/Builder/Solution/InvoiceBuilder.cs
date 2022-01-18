@@ -21,31 +21,36 @@ namespace DesignPatterns.Builder.Solution
             return new Invoice(CompanyName, DocumentNumber, Date, value, tax, Items, Comments);
         }
 
-        public void ToCompany(string companyName)
+        public InvoiceBuilder ToCompany(string companyName)
         {
             this.CompanyName = companyName;
+            return this;
         }
 
-        public void WithDocumentNumber(string documentNumber)
+        public InvoiceBuilder WithDocumentNumber(string documentNumber)
         {
             this.DocumentNumber = documentNumber;
+            return this;
         }
 
-        public void CurrentDate()
+        public InvoiceBuilder CurrentDate()
         {
             this.Date = DateTime.Now;
+            return this;
         }
 
-        public void WithComments(string comments)
+        public InvoiceBuilder WithComments(string comments)
         {
             this.Comments = comments;
+            return this;
         }
 
-        public void WithItem(InvoiceItem item)
+        public InvoiceBuilder WithItem(InvoiceItem item)
         {
             Items.Add(item);
             value += item.Value;
             tax = item.Value * 0.05;
+            return this;    
         }
     }
 }

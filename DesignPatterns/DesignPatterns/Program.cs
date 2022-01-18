@@ -1,6 +1,8 @@
 ﻿// using DesignPatterns.ChainOfResponsibility.Discount.Solution;
 // using DesignPatterns.Strategy.Tax.Solution;
 // using DesignPatterns.Decorator;
+// using DesignPatterns.Builder.Solution;
+// using System;
 
 namespace DesignPatterns
 {
@@ -10,6 +12,9 @@ namespace DesignPatterns
         {
             // TaxExecute.Run();
             // DiscountExecute.Run();
+            // BuilderExecute.Run();
+
+            // Console.ReadKey();
         }
     }
 }

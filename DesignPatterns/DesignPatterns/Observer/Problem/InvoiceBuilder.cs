@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace DesignPatterns.Builder.Solution
+namespace DesignPatterns.Observer.Problem
 {
     public class InvoiceBuilder
     {
@@ -16,7 +16,12 @@ namespace DesignPatterns.Builder.Solution
 
         public Invoice Builder()
         {
-            return new Invoice(CompanyName, DocumentNumber, Date, value, tax, Items, Comments);
+            Invoice invoice = new Invoice(CompanyName, DocumentNumber, Date, value, tax, Items, Comments);
+            new SendInvoice().SendInvoiceMail(invoice);
+            new InvoiceDao().SaveInvoice(invoice);
+            new SendMessage().SendSMS(invoice);
+            // when you find classes that do similar things, It has the same the same abstraction, represent this abstraction
+            return invoice;
         }
 
         public InvoiceBuilder ToCompany(string companyName)

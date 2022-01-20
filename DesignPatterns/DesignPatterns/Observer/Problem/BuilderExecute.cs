@@ -1,6 +1,6 @@
 using System;
 
-namespace DesignPatterns.Builder.Solution
+namespace DesignPatterns.Observer.Problem
 {
     public static class BuilderExecute
     {

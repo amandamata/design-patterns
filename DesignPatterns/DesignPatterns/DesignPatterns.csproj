@@ -13,16 +13,21 @@
     <ItemGroup>
       <Compile Remove="State\Problem\**" />
       <Compile Remove="State\Solution\**" />
+      <Compile Remove="Observer\Problem\Solution\**" />
+      <Compile Remove="Observer\Solution\IAfterBuildInvoice.cs" />
+      <Compile Remove="Observer\Problem\BuilderExecute.cs" />
     </ItemGroup>
 
     <ItemGroup>
       <EmbeddedResource Remove="State\Problem\**" />
       <EmbeddedResource Remove="State\Solution\**" />
+      <EmbeddedResource Remove="Observer\Problem\Solution\**" />
     </ItemGroup>
 
     <ItemGroup>
       <None Remove="State\Problem\**" />
       <None Remove="State\Solution\**" />
+      <None Remove="Observer\Problem\Solution\**" />
     </ItemGroup>
 
 </Project>

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace DesignPatterns.Builder.Solution
+namespace DesignPatterns.Observer.Solution
 {
     public class InvoiceBuilder
     {
@@ -13,10 +13,18 @@ namespace DesignPatterns.Builder.Solution
         private double value;
         private double tax;
         private IList<InvoiceItem> Items = new List<InvoiceItem>();
+        private List<IActionAfterGenerateInvoice> ActionsToBeExecuted = new List<IActionAfterGenerateInvoice>();
 
         public Invoice Builder()
         {
-            return new Invoice(CompanyName, DocumentNumber, Date, value, tax, Items, Comments);
+            Invoice invoice = new Invoice(CompanyName, DocumentNumber, Date, value, tax, Items, Comments);
+            ActionsToBeExecuted.ForEach(x => x.Execute(invoice));
+            return invoice;
+        }
+
+        public void AddAction(IActionAfterGenerateInvoice actionAfterGenerateInvoice)
+        {
+            this.ActionsToBeExecuted.Add(actionAfterGenerateInvoice);
         }
 
         public InvoiceBuilder ToCompany(string companyName)

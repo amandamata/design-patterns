@@ -1,8 +1,8 @@
 using System;
 
-namespace DesignPatterns.Builder.Solution
+namespace DesignPatterns.Observer.Solution
 {
-    public static class BuilderExecute
+    public static class ObserverExecute
     {
         public static void Run()
         {
@@ -15,6 +15,10 @@ namespace DesignPatterns.Builder.Solution
                .CurrentDate()
                .WithComments("With Comments");
 
+           invoiceBuilder.AddAction(new InvoiceDao());
+           invoiceBuilder.AddAction(new SendInvoice());
+           invoiceBuilder.AddAction(new SendMessage());
+           
            Invoice invoice = invoiceBuilder.Builder();
 
            Console.WriteLine(invoice.Value);

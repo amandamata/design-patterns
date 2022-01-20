@@ -2,6 +2,7 @@
 // using DesignPatterns.Strategy.Tax.Solution;
 // using DesignPatterns.Decorator;
 // using DesignPatterns.Builder.Solution;
+// using DesignPatterns.Observer.Solution;
 // using System;
 
 namespace DesignPatterns
@@ -13,7 +14,7 @@ namespace DesignPatterns
             // TaxExecute.Run();
             // DiscountExecute.Run();
             // BuilderExecute.Run();
-
+            // ObserverExecute.Run();
             // Console.ReadKey();
         }
     }
